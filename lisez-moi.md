@@ -1,10 +1,10 @@
 # Le site de La Cour du Roy
 
-Double-clique sur [accueil.html](./accueil.html) pour ouvrir le site dans ton navigateur. Aucune installation ni connexion Internet n'est nécessaire pour afficher la page.
+Double-clique sur [index.html](./index.html) pour ouvrir le site dans ton navigateur. Aucune installation ni connexion Internet n'est nécessaire pour afficher la page.
 
 ## Les fichiers
 
-- [accueil.html](./accueil.html) contient les titres, paragraphes, liens et sections.
+- [index.html](./index.html) contient les titres, paragraphes, liens et sections.
 - [apparence.css](./apparence.css) contient les couleurs, les espacements et la mise en page sur ordinateur et téléphone.
 - [images/logo-club.png](./images/logo-club.png) est le logo fourni avec la maquette.
 - Le dossier [maquette](./maquette/) contient les références extraites de l'archive originale.
