@@ -25,8 +25,7 @@ p { margin: 0 0 20px; color: #61605d; }
 a { color: #80543b; text-decoration: none; }
 a:hover { text-decoration: underline; }
 /* Le contour permet de voir quel lien ou champ est sélectionné au clavier. */
-a:focus-visible, summary:focus-visible, input:focus-visible,
-select:focus-visible, textarea:focus-visible {
+a:focus-visible, summary:focus-visible {
   outline: 3px solid #af7a28;
   outline-offset: 4px;
 }
@@ -80,7 +79,6 @@ nav a { color: #47464b; font-size: 12px; }
 .grille .carte { display: flex; flex-direction: column; }
 .carte p { font-size: 14px; }
 .icone { display: inline-block; align-self: flex-start; background: #efede9; color: #80543b; font-size: 28px; padding: 2px 12px; margin-bottom: 12px; }
-.lien-carte { margin-top: auto; padding-top: 20px; font-size: 12px; }
 .actualites { border-top: 1px solid #edeae5; }
 .entete-carte { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; font-size: 12px; }
 time { color: #666; font-size: 11px; }
@@ -104,11 +102,7 @@ time { color: #666; font-size: 11px; }
 .initiales { background: black; color: #ffe088; border: 2px solid #cba62b; border-radius: 8px; padding: 12px; font: bold 24px Georgia, serif; }
 .contact aside > .carte { margin-bottom: 24px; }
 label { display: block; font-size: 12px; margin-bottom: 6px; }
-input, select, textarea { width: 100%; padding: 11px; border: 1px solid #d5d0c8; border-radius: 3px; background: #faf9f6; color: #333; font: 13px Arial, sans-serif; }
-textarea { resize: vertical; }
-form .grille { gap: 16px; margin-bottom: 18px; }
-form .bouton { width: 100%; margin-top: 12px; }
-button:disabled { background: #595753; color: white; cursor: not-allowed; }
+.contact-statique .bouton { margin: 4px 0 10px; }
 .note { font-size: 12px !important; margin: 14px 0; }
 address { font-style: normal; color: #61605d; font-size: 13px; }
 .localisation { background: #e8e5df; min-height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; margin: 20px 0 12px; font-size: 12px; }
@@ -153,10 +147,11 @@ details p { margin: 8px 0 0; font-size: 12px !important; }
   .informations > div { border: 0; padding: 8px; }
   .quatre-colonnes, .deux-colonnes { grid-template-columns: 1fr; }
   .invitation .conteneur { flex-direction: column; text-align: center; }
-  .president .bouton { margin-left: 0; }
+  .president .bouton, .contact-statique .bouton { margin-left: 0; }
   .entete .bouton { padding: 10px 12px; }
 }
 /* Respecte les personnes qui préfèrent éviter les mouvements à l'écran. */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
