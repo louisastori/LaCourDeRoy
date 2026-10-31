@@ -19,6 +19,7 @@ Une classe relie le HTML au CSS : `class="carte"` utilise les règles `.carte`. 
 
 ## Limites à connaître
 
-Le site utilise uniquement HTML et CSS, sans bibliothèque, sans JavaScript et sans serveur. Le formulaire est une démonstration : son bouton est volontairement désactivé et aucune information n'est envoyée. Pour recevoir les demandes, il faudra ajouter un service d'envoi et configurer son adresse dans l'attribut `action` du formulaire. Le téléphone permet déjà de contacter le club et le lien Google Maps ouvre l'itinéraire.
+Le site utilise uniquement HTML et CSS, sans bibliothèque, sans JavaScript et sans serveur. Il n'y a volontairement aucun formulaire : le bloc de contact affiche seulement le numéro de téléphone du club. Le téléphone permet de contacter le club et le lien Google Maps ouvre l'itinéraire.
 
 Les textes, dates d'actualités, horaires et coordonnées proviennent de la maquette : les faire confirmer par le club avant publication. Le site est enregistré localement, il n'est pas publié sur Internet. Les polices Georgia et Arial sont installées sur la plupart des ordinateurs pour éviter des téléchargements externes.
+
