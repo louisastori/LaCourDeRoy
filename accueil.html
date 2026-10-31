@@ -104,23 +104,13 @@
         <span class="etiquette">Prise de contact &amp; essai</span><h2>Rejoindre La Cour du Roy</h2>
         <p>Venez essayer un mercredi soir sans engagement matériel ni financier. Posez-nous vos questions ou prévenez-nous de votre passage.</p>
         <div class="carte president"><span class="initiales" aria-hidden="true">HS</span><div><span class="etiquette">Président du club</span><h3>Hervé Schmitt</h3><small>Référent inscriptions</small></div><a class="bouton" href="tel:+33629313929">06 29 31 39 29</a></div>
-        <div class="carte">
-          <h3>Formulaire d'essai / Contact direct</h3>
-          <p class="note" id="note-formulaire">Formulaire de démonstration : aucune demande n'est envoyée. Pour réserver un essai, appelez le club au numéro ci-dessus.</p>
-          <!-- Un vrai envoi demande un serveur ou un service de formulaire.
-               Le bouton est désactivé pour ne pas simuler un envoi réussi. -->
-          <form aria-describedby="note-formulaire">
-            <div class="grille deux-colonnes">
-              <!-- Le « for » du label correspond à l'id du champ associé. -->
-              <div><label for="nom">Nom et prénom</label><input id="nom" name="nom" type="text" autocomplete="name" placeholder="Ex. : Jean Dupont"></div>
-              <div><label for="telephone">Numéro de téléphone</label><input id="telephone" name="telephone" type="tel" autocomplete="tel" placeholder="06 …"></div>
-              <div><label for="courriel">Adresse e-mail</label><input id="courriel" name="courriel" type="email" autocomplete="email" placeholder="votre@email.fr"></div>
-              <div><label for="niveau">Niveau approximatif</label><select id="niveau" name="niveau"><option>Débutant absolu</option><option>Connaît les règles</option><option>Joueur régulier</option><option>Compétiteur</option><option>Inscription pour un enfant</option></select></div>
-            </div>
-            <label for="message">Votre message ou date souhaitée</label><textarea id="message" name="message" rows="4" placeholder="Bonjour, je souhaiterais venir découvrir le club…"></textarea>
-            <button class="bouton" type="button" disabled>Envoi indisponible — démonstration</button>
-            <p class="note">Le club fournit les pièces, les pendules et les supports d'étude.</p>
-          </form>
+        <!-- Le site est statique : on affiche les coordonnées sans faux formulaire. -->
+        <div class="carte contact-statique">
+          <span class="etiquette">Contact statique</span>
+          <h3>Prévenir le club de votre venue</h3>
+          <p>Aucun formulaire n'est envoyé depuis ce site. Pour réserver votre séance d'essai ou poser une question, contactez directement Hervé Schmitt.</p>
+          <a class="bouton" href="tel:+33629313929">Appeler le 06 29 31 39 29</a>
+          <p class="note">Le club fournit les pièces, les pendules et les supports d'étude.</p>
         </div>
       </div>
       <aside>
@@ -149,3 +139,4 @@
   </footer>
 </body>
 </html>
+
