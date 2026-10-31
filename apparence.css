@@ -1,0 +1,162 @@
+/* Le CSS règle les couleurs, les tailles et la disposition du HTML.
+   Une règle s'écrit : sélecteur { propriété: valeur; } */
+
+/* 1. Réglages communs à toute la page. */
+* {
+  box-sizing: border-box; /* Les bordures et espacements restent dans la largeur. */
+}
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #faf9f6;
+  color: #20211f;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+}
+h1, h2, h3, .marque {
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.2;
+}
+h1 { font-size: 60px; margin: 24px 0 12px; }
+h2 { font-size: 34px; margin: 10px 0 18px; font-weight: normal; }
+h3 { font-size: 21px; margin: 12px 0; font-weight: normal; }
+p { margin: 0 0 20px; color: #61605d; }
+a { color: #80543b; text-decoration: none; }
+a:hover { text-decoration: underline; }
+/* Le contour permet de voir quel lien ou champ est sélectionné au clavier. */
+a:focus-visible, summary:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline: 3px solid #af7a28;
+  outline-offset: 4px;
+}
+img { max-width: 100%; height: auto; display: block; }
+section, [id] { scroll-margin-top: 24px; }
+.conteneur { width: 90%; max-width: 1160px; margin: 0 auto; }
+.section { padding-top: 90px; padding-bottom: 90px; }
+.etiquette { display: block; color: #80543b; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1.2px; }
+.lien-evitement { position: absolute; top: -100px; left: 15px; padding: 10px; background: white; z-index: 10; }
+.lien-evitement:focus { top: 10px; }
+
+/* 2. Navigation : flex place les éléments les uns à côté des autres. */
+.navigation { display: flex; align-items: center; justify-content: space-between; gap: 22px; min-height: 80px; }
+.marque { color: #161616; font-size: 21px; flex-shrink: 0; }
+.marque span { display: block; font: 10px Arial, sans-serif; text-transform: uppercase; letter-spacing: 2px; color: #80543b; margin-top: 5px; }
+nav { display: flex; gap: 18px; flex-wrap: wrap; }
+nav a { color: #47464b; font-size: 12px; }
+.bouton { display: inline-block; padding: 12px 20px; border: 1px solid transparent; border-radius: 3px; background: #080808; color: white; font: bold 12px/1.5 Arial, sans-serif; text-align: center; }
+.bouton:hover { background: #80543b; color: white; text-decoration: none; }
+.bouton-dore { background: #ffe088; color: #171717; }
+.bouton-clair { background: #242424; border-color: #46423a; }
+
+/* 3. Présentation et logo. Les points sont un fond créé en CSS. */
+.bandeau { background-color: #080808; background-image: radial-gradient(#242018 1px, transparent 1px); background-size: 24px 24px; color: white; padding: 100px 0 110px; }
+.presentation { display: grid; grid-template-columns: 1.3fr 1fr; align-items: center; gap: 90px; }
+.insigne { border: 1px solid #61553a; border-radius: 20px; padding: 6px 12px; font-size: 11px; text-transform: uppercase; color: #ffe088; }
+.sous-titre { font: italic 34px Georgia, serif; color: #f3ce67; margin-bottom: 20px; }
+.introduction { color: #e3e2e0; font-size: 17px; }
+.qualites { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 24px 0; list-style: none; }
+.qualites li { background: #22211f; border: 1px solid #39352e; border-radius: 3px; padding: 4px 9px; font-size: 10px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.cadre-logo { padding: 30px; border: 1px solid #655333; border-radius: 10px; background: #181511; box-shadow: 0 0 65px #80543b25; }
+.cadre-logo img { border: 12px solid #302b26; border-radius: 5px; }
+
+/* 4. La barre d'informations remonte légèrement sur le bandeau. */
+.informations { position: relative; margin-top: -32px; padding: 24px; background: white; border: 1px solid #e7e4df; border-radius: 5px; box-shadow: 0 8px 18px #00000015; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.informations > div { padding: 8px 14px; border-right: 1px solid #eae6e0; }
+.informations strong, .informations span { display: block; }
+.informations strong { font-size: 15px; }
+.informations span, .informations a { font-size: 12px; }
+.informations .etiquette { font-size: 9px; }
+.informations .offre { background: #fff0e7; border: 0; }
+
+/* 5. Grilles réutilisables : 1fr signifie une part de l'espace disponible. */
+.grille { display: grid; gap: 24px; }
+.quatre-colonnes { grid-template-columns: repeat(4, 1fr); }
+.trois-colonnes { grid-template-columns: repeat(3, 1fr); }
+.deux-colonnes { grid-template-columns: repeat(2, 1fr); }
+.titre-section { text-align: center; max-width: 670px; margin: 0 auto 42px; }
+.carte { background: white; border: 1px solid #e5e2dd; border-radius: 5px; padding: 24px; }
+.grille .carte { display: flex; flex-direction: column; }
+.carte p { font-size: 14px; }
+.icone { display: inline-block; align-self: flex-start; background: #efede9; color: #80543b; font-size: 28px; padding: 2px 12px; margin-bottom: 12px; }
+.lien-carte { margin-top: auto; padding-top: 20px; font-size: 12px; }
+.actualites { border-top: 1px solid #edeae5; }
+.entete-carte { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; font-size: 12px; }
+time { color: #666; font-size: 11px; }
+.categorie { background: #ffdbca; color: #653d26; padding: 4px 6px; font-size: 9px; text-transform: uppercase; font-weight: bold; }
+.doree { background: #ffe088; color: #574500; }
+.grise { background: #e8e6e4; color: #393939; }
+.pied-carte { margin-top: auto; padding-top: 16px; border-top: 1px solid #eee; color: #80543b; font-size: 12px; }
+
+/* 6. Horaires et contact. */
+.fond-gris { background: #f2f1ee; }
+.titre-horaires { margin-bottom: 35px; }
+.creneau { border-top: 5px solid #98694e; }
+.creneau-noir { border-top-color: #171717; }
+.creneau-dore { border-top-color: #cba62b; }
+.jeu-libre { margin-top: 28px; border-color: #cdb8ab; }
+.jeu-libre p { margin-bottom: 10px; }
+.contact { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; }
+.president { display: flex; align-items: center; flex-wrap: wrap; gap: 15px; margin: 26px 0; }
+.president h3 { margin: 4px 0; }
+.president .bouton { margin-left: auto; }
+.initiales { background: black; color: #ffe088; border: 2px solid #cba62b; border-radius: 8px; padding: 12px; font: bold 24px Georgia, serif; }
+.contact aside > .carte { margin-bottom: 24px; }
+label { display: block; font-size: 12px; margin-bottom: 6px; }
+input, select, textarea { width: 100%; padding: 11px; border: 1px solid #d5d0c8; border-radius: 3px; background: #faf9f6; color: #333; font: 13px Arial, sans-serif; }
+textarea { resize: vertical; }
+form .grille { gap: 16px; margin-bottom: 18px; }
+form .bouton { width: 100%; margin-top: 12px; }
+button:disabled { background: #595753; color: white; cursor: not-allowed; }
+.note { font-size: 12px !important; margin: 14px 0; }
+address { font-style: normal; color: #61605d; font-size: 13px; }
+.localisation { background: #e8e5df; min-height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; margin: 20px 0 12px; font-size: 12px; }
+.localisation > span:first-child { font-size: 45px; color: #80543b; }
+.bouton-itineraire { background: #efeeeb; color: #333; width: 100%; }
+details { background: #f4f3f1; padding: 12px; margin-top: 10px; font-size: 13px; }
+summary { cursor: pointer; font-weight: bold; }
+details p { margin: 8px 0 0; font-size: 12px !important; }
+
+/* 7. Dernière invitation et pied de page. */
+.invitation { background: #080808; color: white; padding: 38px 0; }
+.invitation .conteneur { display: flex; align-items: center; justify-content: space-between; gap: 25px; }
+.invitation h2 { font-size: 25px; margin: 0 0 8px; }
+.invitation p { color: #dedbd5; margin: 0; font-size: 13px; }
+.invitation .bouton { flex-shrink: 0; }
+.pied-page { padding-top: 60px; padding-bottom: 24px; font-size: 12px; }
+.pied-page h3 { font-size: 18px; }
+.pied-page .etiquette { font-size: 9px; }
+.mentions { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; border-top: 1px solid #e7e4df; margin-top: 35px; padding-top: 22px; color: #68645e; font-size: 11px; }
+
+/* 8. Les media queries changent la disposition selon la largeur de l'écran. */
+@media (max-width: 1050px) {
+  .navigation { flex-wrap: wrap; padding: 18px 0; }
+  nav { order: 3; width: 100%; justify-content: center; }
+  .presentation { gap: 40px; }
+  h1 { font-size: 48px; }
+  .quatre-colonnes, .informations { grid-template-columns: repeat(2, 1fr); }
+  .contact { grid-template-columns: 1.2fr 1fr; gap: 24px; }
+  .trois-colonnes { gap: 14px; }
+  .carte { padding: 20px; }
+}
+@media (max-width: 700px) {
+  .section { padding-top: 55px; padding-bottom: 55px; }
+  h1 { font-size: 42px; }
+  h2 { font-size: 29px; }
+  .sous-titre { font-size: 29px; }
+  nav { gap: 12px 18px; }
+  .bandeau { padding: 55px 0 75px; }
+  .presentation, .contact, .trois-colonnes { grid-template-columns: 1fr; }
+  .cadre-logo { width: 260px; max-width: 100%; margin: 0 auto; padding: 18px; }
+  .informations { padding: 16px; gap: 8px; }
+  .informations > div { border: 0; padding: 8px; }
+  .quatre-colonnes, .deux-colonnes { grid-template-columns: 1fr; }
+  .invitation .conteneur { flex-direction: column; text-align: center; }
+  .president .bouton { margin-left: 0; }
+  .entete .bouton { padding: 10px 12px; }
+}
+/* Respecte les personnes qui préfèrent éviter les mouvements à l'écran. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
